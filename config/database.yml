@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: returnspace_production
-  username: returnspace
+  username: rails
   password: <%= ENV['RETURNSPACE_DATABASE_PASSWORD'] %>
