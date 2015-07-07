@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150705081039) do
+ActiveRecord::Schema.define(version: 20150707001435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150705081039) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "sender_id"
+    t.string   "location"
   end
 
   add_index "uploads", ["sender_id"], name: "index_uploads_on_sender_id", using: :btree
