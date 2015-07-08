@@ -1,9 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe SessionsController, type: :controller do
+RSpec.describe UsersController, type: :controller do
 
-<<<<<<< HEAD
-=======
+  describe "GET #index" do
+    it "returns http success" do
+      get :index
+      expect(response).to have_http_status(:success)
+    end
+  end
+
   describe "GET #new" do
     it "returns http success" do
       get :new
@@ -18,12 +23,4 @@ RSpec.describe SessionsController, type: :controller do
     end
   end
 
-  describe "GET #destroy" do
-    it "returns http success" do
-      get :destroy
-      expect(response).to have_http_status(:success)
-    end
-  end
-
->>>>>>> 64a9bc026fd69c6a2efd8756f9c4b7dac9afaf79
 end

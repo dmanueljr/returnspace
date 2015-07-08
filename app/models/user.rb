@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+<<<<<<< HEAD
 
   has_many :uploads
   has_many :senders, through: :uploads
@@ -14,4 +15,9 @@ class User < ActiveRecord::Base
     end
   end
 
+=======
+    has_many :uploads
+    has_many :senders, through: :uploads
+    has_secure_password
+>>>>>>> 64a9bc026fd69c6a2efd8756f9c4b7dac9afaf79
 end

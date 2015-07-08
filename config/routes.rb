@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
@@ -7,11 +8,28 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
 
   # root 'sessions#create'
+=======
+
+>>>>>>> 64a9bc026fd69c6a2efd8756f9c4b7dac9afaf79
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+
+  # users routes
+  get "/users" => "users#index", as: :users
+  post "/users" => "users#create"
+  get "/users/new" => "users#new"
+  get "/users/:id/edit" => "users#edit", as: :edit_user
+  get "/users/:id" => "users#show", as: :user
+  patch "/users/:id" => "users#update"
+  delete "/users/:id" => "users#destroy"
+
+  # sessions routes
+  get 'login' => 'sessions#new', as: :login
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy', as: :logout
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
