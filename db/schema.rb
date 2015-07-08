@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20150708012943) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "provider"
-    t.integer  "uid"
+    t.string   "uid"
   end
 
   add_foreign_key "tags", "uploads"
