@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  resources :sessions, only: [:create, :destroy]
+  resources :sessions
 
-  # root 'sessions#create'
+  root 'sessions#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
