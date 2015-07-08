@@ -1,0 +1,16 @@
+<h1>All Users</h1>
+
+<% if current_user %>
+	You are logged in as <%= @current_user.first_name%>
+	<%= link_to "LOG OUT", logout_path, method: :delete %>
+<% else %>
+	<%= link_to "SIGN UP", users_new_path %>
+	<%= link_to "LOG IN", login_path %>
+<% end %>
+
+
+<% @users.each do |user| %>
+	<%= user.first_name %>
+
+
+<% end %>
