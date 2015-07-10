@@ -1,0 +1,5 @@
+<% @uploads.each do |upload| %>
+  <div class="img-thumbnail">
+    <%= image_tag upload.avatar.url(:thumb), alt: upload.avatar.url(:thumb) %>
+  </div>
+<% end %>
