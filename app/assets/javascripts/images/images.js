@@ -13,4 +13,3 @@ $(document).ready(function(){
     $.getScript("/images");
   })
 });
-alert('foo')
